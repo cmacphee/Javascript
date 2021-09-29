@@ -34,6 +34,14 @@ if ( b == true ) {
 //Ternary
 b ? console.log('true') : console.log('false')
 
+//If with an OR
+
+let fName = "bill";
+
+if ( fName == "bill" || fName == "bob" ) {
+    console.log(fName);
+};
+
 //IF Statement Tutorial
 let age = 17
 
