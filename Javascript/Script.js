@@ -1,56 +1,78 @@
-//Conditionals
+//OBJECTS, ARRAYS and JSON
 
-//FALSEY - these are the situations where a variable will resolve as false
-let falseOne = 0;
-let falseTwo = '';
-let falseThree;
-let falseFour = null;
-let falseFive = NaN;
-let falseSix = false;
+let animal = new Object();
+//object values
+animal["name"] = "Clifford";
+animal["type"] = "Dog";
+animal["Size"] = "Big";
 
-// everything else is TRUTHY
+console.log(animal);
+console.log(animal.Size);
+//colour will be added to object
+animal.colour = "Red";
+console.log(animal);
 
-// IF Statement (Also ELSE IF and ELSE)
-
-let a = 2;
-
-if ( a == 0 ) {
-    console.log('success!');
-} else if ( a != 2 ) {
-    console.log('not 2')
-} else {
-    console.log('it must be 2')
+//Shorthand object creation
+let vehicle = {
+    "type" : "car",
+    "seats" : "5",
+    "wheels" : 4
 };
+console.log(vehicle);
 
-//Ternary IF
-//normal
-let b = false;
+//Object can be stored in an array
+let garage = [
+    vehicle,
+    {"type" : "bike", "seats":"1", "wheels": 2}
+];
+console.log(garage);
 
-if ( b == true ) {
-    console.log('b is true!');
-} else {
-    console.log('b is false!')
-};
-//Ternary
-b ? console.log('true') : console.log('false')
+//Lets loop through an array
 
-//If with an OR
+let x = [1,2,3,4,5];
+for (let i = 0; i < x.length; i++) {
+    console.log(x[i])
+}
 
-let fName = "bill";
+//Enhanced FOR loop
+let m = [21,22,98,4543,-99,35]
+for (let i of m) {
+    console.log(i)
+}
 
-if ( fName == "bill" || fName == "bob" ) {
-    console.log(fName);
-};
+//ARRAY OBJECT METHODS
+//Reverse Array
+console.log(m.reverse())
+//join the array. put a | between the values
+console.log(m.join(`|`))
 
-//IF Statement Tutorial
-let age = 17
+//JSON
+let newJSON = {
+    "name" : "Connor",
+    "age" : 26
+}
+//parse from json object
+let myName = JSON.parse(`{"name" : "Connor"}`);
+console.log(myName.name)
+//string object
+let str = JSON.stringify(newJSON);
+console.log(str)
 
-if ( age < 18 ) {
-    console.log('underage')
-} else if ( age > 65 ) {
-    console.log ('OLD')
-} else {
-    console.log(`age is between 18 and 65...${age}`)
-};
+//OBJECT, ARRAYS & JSON TUTORIAL
 
-age > 50 ? console.log('age is greater than 50') : console.log('50 or less')
+let myArray = ["hello", "Everyone"]
+
+console.log(myArray.length)
+
+myArray.push("Hola", "Hey", "Yo");
+
+console.log(myArray.length)
+
+myArray.shift()
+for (let i of myArray) {
+    console.log(i)
+}
+
+
+
+
