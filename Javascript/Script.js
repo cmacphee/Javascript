@@ -1,105 +1,48 @@
-//Iteration Demo
-//FOR Loops
-//create a for loop...
-//setting a condition
-//declaring 'steps'
-for(let i = 0; i < 10; i++) {
-    console.log(`i = ${i}`)
+//Conditionals
+
+//FALSEY - these are the situations where a variable will resolve as false
+let falseOne = 0;
+let falseTwo = '';
+let falseThree;
+let falseFour = null;
+let falseFive = NaN;
+let falseSix = false;
+
+// everything else is TRUTHY
+
+// IF Statement (Also ELSE IF and ELSE)
+
+let a = 2;
+
+if ( a == 0 ) {
+    console.log('success!');
+} else if ( a != 2 ) {
+    console.log('not 2')
+} else {
+    console.log('it must be 2')
 };
 
-//WHILE Loops
-//work with booleans
-//run until a condition is no longer true
+//Ternary IF
+//normal
+let b = false;
 
-let condition = true;
-let increment = 0;
+if ( b == true ) {
+    console.log('b is true!');
+} else {
+    console.log('b is false!')
+};
+//Ternary
+b ? console.log('true') : console.log('false')
 
-while(condition) {
-    if(increment == 10){
-        condition = false;
-    }
-    console.log(`increment = ${increment}`);
-    increment++;
+//IF Statement Tutorial
+let age = 17
+
+if ( age < 18 ) {
+    console.log('underage')
+} else if ( age > 65 ) {
+    console.log ('OLD')
+} else {
+    console.log(`age is between 18 and 65...${age}`)
 };
 
-//DO-WHILE Loop
-//the same as a while loop, but it always runs at least ONCE
-let a = false;
-
-do{
-    console.log('this loop is running')
-} while (a);
-
-//SWITCH CASES
-let num = 0;
-
-switch(num) {
-    case 0:
-        console.log('the number is equal to 0')
-        break;
-    case 1:
-        console.log('the number is equal to 1')
-        break;
-    case 5:
-        console.log('the number is equal to 5')
-        break;
-    case 10:
-        console.log('the number is equal to 10')
-        break;
-    default:
-        console.warn('not sure what you are doing here')
-};
-
-//tutorial
-//flowchart 1:
-for(let A = 100; A <= 200; A++) {
-    console.log(`A = ${A}`)
-};
-
-//flowchart 2:
-for(let A = 100; A <= 200; A++) {
-    var B = A % 2;
-    switch(B) {
-        case 0:
-            console.log('-')
-            break;
-        case 1:
-            console.log('*')
-    }
-};
-
-//numbers loop
-
-for (let num = 1; num <=10; num++) {
-    for (let count = 1; count <= 10; count++) {
-        console.log(count)
-    }
-};
-
-//day switch case
-let day = 'Monday'
-
-switch(day){
-    case 'Monday':
-        console.log('Monday')
-    case 'Tuesday':
-        console.log('Tuesday')
-    case 'Wednesday':
-        console.log('Wednesday') 
-    case 'Thursday':
-        console.log('Thursday')
-    case 'Friday':
-        console.log('Friday')
-        break;
-    case 'Saturday':   
-        console.log('Saturday')
-        break;  
-    case 'Sunday':   
-        console.log('Sunday')
-        break;  
-    default:
-        console.log('That is not a valid day')
-}
-
-
-
+age > 50 ? console.log('age is greater than 50') : console.log('50 or less')
