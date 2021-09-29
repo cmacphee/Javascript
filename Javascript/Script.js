@@ -99,7 +99,6 @@ switch(day){
         break;  
     default:
         console.log('That is not a valid day')
-        break;
 }
 
 
