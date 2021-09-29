@@ -20,7 +20,6 @@ console.log("Star Sign: " + zodiac);
 
 // To make your console log look unique you can insert css
 
-console.log('%c' + firstName + '%c' +  lastName,
- 'color: orange; font-family: sans-sheriff; font-weight: bold; background-color: black; padding: 10px',
+console.log('%c' + 'Hi, my name is ' + firstName + '' + lastName,
  'color: orange; font-family: sans-sheriff; font-weight: bold; background-color: black; padding: 10px'
  );
