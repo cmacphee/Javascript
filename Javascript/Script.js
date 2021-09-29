@@ -1,77 +1,53 @@
-//OBJECTS, ARRAYS and JSON
+//SCOPE
 
-let animal = new Object();
-//object values
-animal["name"] = "Clifford";
-animal["type"] = "Dog";
-animal["Size"] = "Big";
-
-console.log(animal);
-console.log(animal.Size);
-//colour will be added to object
-animal.colour = "Red";
-console.log(animal);
-
-//Shorthand object creation
-let vehicle = {
-    "type" : "car",
-    "seats" : "5",
-    "wheels" : 4
+//Function scope
+function foo() {
+    let bar = 'Hello World';
+    console.log(bar);
 };
-console.log(vehicle);
+foo();
+//bar was declared inside function so cannot be called outside. Local scope
+// console.log(bar);
 
-//Object can be stored in an array
-let garage = [
-    vehicle,
-    {"type" : "bike", "seats":"1", "wheels": 2}
-];
-console.log(garage);
 
-//Lets loop through an array
-
-let x = [1,2,3,4,5];
-for (let i = 0; i < x.length; i++) {
-    console.log(x[i])
+//This is a block. block scope. again cant access outwith block
+{
+    let x = 1;
 }
+// console.log(x)
 
-//Enhanced FOR loop
-let m = [21,22,98,4543,-99,35]
-for (let i of m) {
-    console.log(i)
-}
+//var is not good as it allows you to access. bad practice.
+{
+    var y = 3;
+};
+console.log(y);
 
-//ARRAY OBJECT METHODS
-//Reverse Array
-console.log(m.reverse())
-//join the array. put a | between the values
-console.log(m.join(`|`))
+//Global scope - accessible outside the function if function is run first
 
-//JSON
-let newJSON = {
-    "name" : "Connor",
-    "age" : 26
-}
-//parse from json object
-let myName = JSON.parse(`{"name" : "Connor"}`);
-console.log(myName.name)
-//string object
-let str = JSON.stringify(newJSON);
-console.log(str)
+function global() {
+greeting = 'Heya';
+};
+global();
+console.log(greeting)
 
-//OBJECT, ARRAYS & JSON TUTORIAL
+//standard global - globally scoped so can be called 
+//outside and inside of functions
+let a = 'a';
+console.log(a)
 
-let myArray = ["hello", "Everyone"]
+function b() {
+    console.log(`a = ${a}`);
+};
 
-console.log(myArray.length)
+//order of scope:
+//Local (inside the block)
+//global (outside the block)
+// if none exists add to the global scope
 
-myArray.push("Hola", "Hey", "Yo");
+//SCOPE TUTORIAL
 
-console.log(myArray.length)
 
-myArray.shift()
-for (let i of myArray) {
-    console.log(i)
-}
+
 
 
 
