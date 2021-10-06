@@ -4,7 +4,7 @@ console.log("A bit about me:");
 // Different kinds of console logging
 const firstName ='Connor';
 const lastName ='Macphee';
-const birthPlace ='Inverness';
+const birthPlace ='Edinburgh';
 const zodiac ='Scorpio';
 
 console.log("First name: " + firstName);
